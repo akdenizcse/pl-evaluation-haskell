@@ -111,7 +111,7 @@ doubleEvenNumber a =
 		then a
 		else a * 2
 ```
-- Craete a shape
+- Create a shape
 ```haskell
 data Shape = Circle Float Float Float | Rectangle Float Float Float Float
 	deriving (Show)
