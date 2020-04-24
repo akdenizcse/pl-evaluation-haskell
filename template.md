@@ -17,35 +17,35 @@ The most important point is the Haskell 2010 in the modern history of Haskell de
 In the 1980s, functional programming languages were invented and extended variously by lots of researchers. Example Languages are ML, Hope and Miranda. However, many of them did not have ‘open-source’ frameworks. Also, researches were fragmented across the various languages. So, a committee is formed by a group of academics for designing and implementing a new language, which would be used as a vehicle for research as well as for teaching functional programming.
 ## Why shall we use it/Things that are specific to this language?
 We should use Haskell because Haskell is the best mainstream language for writing correct code and has below properties.
--Purity:
+- Purity:
 Haskell is pure unlike other functional programming languages. It means it is reliable and there are no side effects. For example, if a function f has type Int -> Int you can be sure that f will not read or write any mutable variables, nor will it perform any input/output.
--Laziness:
+- Laziness:
 Haskell is non-script language. It means something is only will be evaluated if it must.
--Strong typing:
+- Strong typing:
 It means you cannot convert a double to integer inadvertently. It is a good property because compiler often treats a double like integer or other types. When we need to convert a double to integer it might be hard, but these cases are rare.
--Elegance:
+- Elegance:
 Haskell is elegance it means that things works exactly like what you expect.
--Concise:
+- Concise:
 Mostly programs are shorts so writing and reading are easy.
--High level:
+- High level:
 Mostly programs are read as same as in the algorithm description. 
--Memory managed:
+- Memory managed:
 The Garbage Collector takes care all the dangling pointers.
--Modular:
+- Modular:
 Haskell strongly suggests using already developed programs in your program.
 
 The combination of these features that makes Haskell unique.
 
 ## How to setup an environment to use it in different platforms
--For Windows:
+- For Windows:
 You should go to https://www.haskell.org/platform/windows.html and download the Installer for 32 bit or 64 bit.
--For MAC:
+- For MAC:
 You should go to https://www.haskell.org/platform/mac.html and download the installer.
--For Linux:
+- For Linux:
 You should go to https://www.haskell.org/platform/linux.html and choose your distribution. For example, if you choose Ubuntu so will see a message telling you run the “$ sudo apt-get install haskell-platform” command. After opening your terminal (Ctrl+Alt+T) run the command. After installing you will see a confirmation message. After going into your terminal and run GHCI command. You will get the Prelude prompt and after this you are ready to use Haskell. For exiting the GHCI prolog you may use the command “:quit.exit”.
 
 ## Example Codes
--Implement a function that doubles any odd Integer:
+- Implement a function that doubles any odd Integer:
 ```haskell
 ifOddDouble :: Integer -> Integer
 ifOddDouble n =
@@ -53,7 +53,7 @@ ifOddDouble n =
     then double n
     else n
 ```
--Implement factorial function
+- Implement factorial function
 ```haskell
 factorial :: Natural -> Natural
 factorial n =
@@ -61,22 +61,22 @@ factorial n =
     then 1
     else n * factorial (n - 1)
 ```
--Create an Employee and with Eq give the ability to the check if they are equal
+- Create an Employee and with Eq give the ability to the check if they are equal
 ```haskell
 data Employee = Employee { name :: String,	
 						   position :: String,
 						   idNum :: Int 
 						   } deriving (Eq, Show)
 ```
--Create an Employee
+- Create an Employee
 ```haskell
 samSmith = Employee {name = "John Doe", position = "receptionist", idNum = 01}
 ```
--Create a simple list
+- Create a simple list
 ```haskell
 numbers = [1,4,9,5]
 ```
--Create Colors
+- Create Colors
 ```haskell
   data Colors = Green
 	      | Blue
@@ -84,18 +84,18 @@ numbers = [1,4,9,5]
 	      | Red
           deriving Show
  ```
--Printing with user input
+- Printing with user input
 ```haskell
   main = do putStrLn "Type something: 
    " exampleinput <- getLine 
    putStrLn ("You typed " ++ exampleinput)
 ```
--Define a type
+- Define a type
 ```haskell
 data coordinates = X | Y | Z
 ```
 
--Check if strings are equal with recursion
+- Check if strings are equal with recursion
 ```haskell
 areStringsEq :: [Char] -> [Char] -> Bool
 areStringsEq [] [] = True
