@@ -4,13 +4,14 @@ The language called by the name Haskell. Haskell named after Haskell Curry. (log
 The language was developed by Philip Wadler.  KRC, OL, Miranda and Orwell influenced Haskell.  An influential book on functional programming authored by Wadler and Bird (Wadler and Bird, 1988). 
 ## History of the Haskell
 Lambda calculus is important concept on functional programming languages. It is basis of many functional compiler intermediate languages like Haskell, OCaml, StandartML. 
-There was a conference in September of 1987 to define a non-strict functional programming language. They sometimes met and discuss and the first report of Haskell version 1.0 was in 1 April 1990. 
-In 1991 The Haskell Report 1.1 Version Published and edited by Hudak, Wadler and Peyton Jones.
-In 1992 The Haskell Report 1.1 Version Published and edited by Hudak, Wadler and Peyton Jones and 1992 the first Haskell tutorial was published, and it was written by Fasel and Hudak. At the same year GHC was created. GHC stands for Glasgow Haskell Compiler. GHC is compiler for Haskell. It is open-source native compiler. GHC is still developing.
-In 1994 John Peterson registered the Haskell.org so Haskell gained Internet presence.
-In 1996 the Haskell version 1.3 report was published and edited by Hammond and Peterson.
-In 1997 the Haskell version 1.4 report was published and edited by Hammond and Peterson the only significant change is that list comprehensions were generalised to arbitrary monads, a decision that was reversed two years later.
-In 1999 the language and libraries were published and edited by Peyton Jones and Hughes in the Haskell 98 Report.
+- There was a conference in September of 1987 to define a non-strict functional programming language. They sometimes met and discuss and the first report of Haskell version 1.0 was in 1 April 1990. 
+- In 1991 The Haskell Report 1.1 Version Published and edited by Hudak, Wadler and Peyton Jones.
+- In 1992 The Haskell Report 1.1 Version Published and edited by Hudak, Wadler and Peyton Jones and 1992 the first Haskell tutorial was published, and it was written by Fasel and Hudak. 
+- In 1992 GHC was created. GHC stands for Glasgow Haskell Compiler. GHC is compiler for Haskell. It is open-source native compiler. GHC is still developing.
+- In 1994 John Peterson registered the Haskell.org so Haskell gained Internet presence.
+- In 1996 the Haskell version 1.3 report was published and edited by Hammond and Peterson.
+- In 1997 the Haskell version 1.4 report was published and edited by Hammond and Peterson the only significant change is that list comprehensions were generalised to arbitrary monads, a decision that was reversed two years later.
+- In 1999 the language and libraries were published and edited by Peyton Jones and Hughes in the Haskell 98 Report.
 The most important point is the Haskell 2010 in the modern history of Haskell development, and it is also the currently used by Haskell Developers. 
 
 ## Why was it invented
@@ -103,5 +104,27 @@ areStringsEq (x:xs) (y:ys) = x == y && areStringsEq xs ys
 areStringsEq _ _ = False
  
 ```
+- There are no if without an else in Haskell
+```haskell
+doubleEvenNumber a = 
+	if (a `mod` 2 /= 0)
+		then a
+		else a * 2
+```
+- Craete a shape
+```haskell
+data Shape = Circle Float Float Float | Rectangle Float Float Float Float
+	deriving (Show)
+```
+- Create a function to calcuate area of shapes
+```haskell
+area :: Shape -> Float
+area (Circle _ _ r) = pi * r ^ 2
+area (Rectangle x y x2 y2) = (abs (x2 - x)) * (abs (y2 -y))
+```
+- Get area of shapes
+```haskell
+areaOfCircle = area (Circle 50 60 20)
+areaOfRectangle = area $ Rectangle 10 10 100 100
+```
 
-  
