@@ -15,7 +15,7 @@ The most important point is the Haskell 2010 in the modern history of Haskell de
 
 ## Why was it invented
 In the 1980s, functional programming languages were invented and extended variously by lots of researchers. Example Languages are ML, Hope and Miranda. However, many of them did not have ‘open-source’ frameworks. Also, researches were fragmented across the various languages. So, a committee is formed by a group of academics for designing and implementing a new language, which would be used as a vehicle for research as well as for teaching functional programming.
-## Why shall we use it/- Things that are specific to this language?
+## Why shall we use it/Things that are specific to this language?
 We should use Haskell because Haskell is the best mainstream language for writing correct code and has below properties.
 -Purity:
 Haskell is pure unlike other functional programming languages. It means it is reliable and there are no side effects. For example, if a function f has type Int -> Int you can be sure that f will not read or write any mutable variables, nor will it perform any input/output.
@@ -68,22 +68,40 @@ data Employee = Employee { name :: String,
 						   idNum :: Int 
 						   } deriving (Eq, Show)
 ```
+-Create an Employee
+```haskell
+samSmith = Employee {name = "John Doe", position = "receptionist", idNum = 01}
+```
 -Create a simple list
 ```haskell
 numbers = [1,4,9,5]
-  ```
+```
 -Create Colors
-	```haskell
+```haskell
   data Colors = Green
-					| Blue
-					| Yellow
-					| Red
-				deriving Show
-    ```
+	      | Blue
+	      | Yellow
+	      | Red
+          deriving Show
+ ```
 -Printing with user input
-	```haskell
+```haskell
   main = do putStrLn "Type something: 
    " exampleinput <- getLine 
    putStrLn ("You typed " ++ exampleinput)
-    ```
-   
+```
+-Define a type
+```haskell
+data coordinates = X | Y | Z
+```
+
+-Check if strings are equal with recursion
+```haskell
+areStringsEq :: [Char] -> [Char] -> Bool
+areStringsEq [] [] = True
+areStringsEq (x:xs) (y:ys) = x == y && areStringsEq xs ys
+areStringsEq _ _ = False
+ 
+```
+
+  
