@@ -16,6 +16,8 @@ The most important point is the Haskell 2010 in the modern history of Haskell de
 
 ## Why was it invented
 In the 1980s, functional programming languages were invented and extended variously by lots of researchers. Example Languages are ML, Hope and Miranda. However, many of them did not have ‘open-source’ frameworks. Also, researches were fragmented across the various languages. So, a committee is formed by a group of academics for designing and implementing a new language, which would be used as a vehicle for research as well as for teaching functional programming.
+## When shall we use this language?
+Generally , it is really good in mathematical computations. Also, you can write complex programs easily in Haskell. You can write pretty much everything in Haskell. It is good in writing compilers too.
 ## Why shall we use it/Things that are specific to this language?
 We should use Haskell because Haskell is the best mainstream language for writing correct code and has below properties.
 - Purity:
@@ -46,6 +48,23 @@ You should go to https://www.haskell.org/platform/mac.html and download the inst
 You should go to https://www.haskell.org/platform/linux.html and choose your distribution. For example, if you choose Ubuntu so will see a message telling you run the “$ sudo apt-get install haskell-platform” command. After opening your terminal (Ctrl+Alt+T) run the command. After installing you will see a confirmation message. After going into your terminal and run GHCI command. You will get the Prelude prompt and after this you are ready to use Haskell. For exiting the GHCI prolog you may use the command “:quit.exit”.
 
 ## Example Codes
+- Hello World!
+```haskell
+main :: IO ()
+main = putStrLn "Hello, World!"
+```
+-Comment
+```haskell
+--This is a comment.
+```
+
+- In do expressions we must use let expression.
+```haskell
+main = do
+    let a = 2
+    print a
+```
+
 - Implement a function that doubles any odd Integer:
 ```haskell
 ifOddDouble :: Integer -> Integer
@@ -62,6 +81,16 @@ factorial n =
     then 1
     else n * factorial (n - 1)
 ```
+-Implement a function including if and else staments.
+```haskell
+f x
+  = let a = w x
+    in if cond1 x
+       then a
+       else if cond2 x
+            then g a
+            else f (h x a)
+```
 - Create an Employee and with Eq give the ability to the check if they are equal
 ```haskell
 data Employee = Employee { name :: String,	
@@ -69,7 +98,7 @@ data Employee = Employee { name :: String,
 						   idNum :: Int 
 						   } deriving (Eq, Show)
 ```
-- Create an Employee
+- Create an data type called Employee
 ```haskell
 samSmith = Employee {name = "John Doe", position = "receptionist", idNum = 01}
 ```
@@ -77,7 +106,7 @@ samSmith = Employee {name = "John Doe", position = "receptionist", idNum = 01}
 ```haskell
 numbers = [1,4,9,5]
 ```
-- Create Colors
+- Create an data type called Colors
 ```haskell
   data Colors = Green
 	      | Blue
@@ -111,7 +140,7 @@ doubleEvenNumber a =
 		then a
 		else a * 2
 ```
-- Create a shape
+- Create an data type called shape
 ```haskell
 data Shape = Circle Float Float Float | Rectangle Float Float Float Float
 	deriving (Show)
