@@ -53,7 +53,7 @@ You should go to https://www.haskell.org/platform/linux.html and choose your dis
 main :: IO ()
 main = putStrLn "Hello, World!"
 ```
--Comment
+- Comment
 ```haskell
 --This is a comment.
 ```
@@ -81,7 +81,7 @@ factorial n =
     then 1
     else n * factorial (n - 1)
 ```
--Implement a function including if and else staments.
+- Implement a function including if and else staments.
 ```haskell
 f x
   = let a = w x
