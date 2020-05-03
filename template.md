@@ -1,5 +1,5 @@
 # Haskell
-The language called by the name Haskell. Haskell named after Haskell Curry. (logician)	
+The language called by the name Haskell. Haskell named after Haskell Curry(logician). 	
 ## Author
 The language was developed by Philip Wadler.  KRC, OL, Miranda and Orwell influenced Haskell.  An influential book on functional programming authored by Wadler and Bird (Wadler and Bird, 1988). 
 ## History of the Haskell
